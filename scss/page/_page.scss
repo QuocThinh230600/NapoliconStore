@@ -1,0 +1,121 @@
+.page{
+    padding-top: 8px;
+    width: 1250px;
+
+    .banner{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 678px;
+
+        .banner-left{
+            position: relative;
+            width: 100%;
+            transition: all 0.5s ease;
+
+            a{
+                display: none;
+                position: absolute;
+                text-decoration: none;
+                color: var(--text-color-light);
+                font-weight: 500;
+                font-size: var(--size-font-large);
+                transition: all 0.5s ease;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.7);
+
+                .title{
+                    margin-top: auto;
+                    text-align: left;
+                    padding-left: 20px;
+                }
+
+                .description{
+                    text-align: left;
+                    margin-bottom: auto;
+                    padding-left: 20px;
+
+                }
+            }
+
+            img{
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 678px;
+            }
+
+            &:hover{
+
+                a{
+                    display: flex;
+                    flex-direction: column;
+                    transition: all 0.5s ease;
+                }
+
+                width: calc(100% + 100px);
+                transition: all 0.5s ease;
+
+                & ~ .banner-right{
+                    width: calc(100% - 100px);
+                }
+            }
+        }
+
+        .banner-right{
+            position: relative;
+            width: 100%;
+            transition: all 0.5s ease;
+
+            a{
+                display: none;
+                position: absolute;
+                text-decoration: none;
+                color: var(--text-color-light);
+                font-weight: 500;
+                font-size: var(--size-font-large);
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.7);
+                transition: all 0.5s ease;
+
+                .title{
+                    margin-top: auto;
+                    text-align: right;
+                    padding-right: 20px;
+                }
+
+                .description{
+                    text-align: right;
+                    margin-bottom: auto;
+                    padding-right: 20px;
+                }
+            }
+            
+            img{
+                position: absolute;
+                right: 0;
+                width: 100%;
+                height: 678px;
+            }
+
+            &:hover{
+
+                a{
+                    display: flex;
+                    flex-direction: column;
+                    transition: all 0.5s ease;
+                }
+
+                width: calc(100% + 100px);
+                transition: all 0.5s ease;
+
+                & ~ .banner-left{
+                    width: calc(100% - 100px);
+                }
+            }
+        }
+    }
+}
