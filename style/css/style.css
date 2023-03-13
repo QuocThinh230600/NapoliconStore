@@ -336,7 +336,8 @@ body {
 .container .page .content .page-content {
   display: flex;
   flex-direction: row;
-  margin: 2px 0;
+  padding-top: 10px;
+  padding-bottom: 30px;
 }
 .container .page .content .page-content .left-content {
   margin: auto;
@@ -393,6 +394,69 @@ body {
 .container .page .content .page-content .right-content img {
   width: 100%;
   height: 600px;
+}
+.container .page .content .footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #cccccc;
+  border-left: 0;
+  border-right: 0;
+  height: 50px;
+}
+.container .page .content .footer .title {
+  line-height: 50px;
+  font-weight: 500;
+}
+.container .page .content .footer .title::before {
+  content: "";
+  display: block;
+  width: 50px;
+}
+.container .page .content .footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+.container .page .content .footer ul .none {
+  width: 20px;
+}
+.container .page .content .footer ul .none:last-child {
+  width: 0;
+}
+.container .page .content .footer ul li {
+  line-height: 50px;
+}
+.container .page .content .footer ul li a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 300;
+  line-height: 30px;
+  text-align: left;
+}
+.container .page .content .footer ul li a span {
+  position: absolute;
+  display: block;
+  background: #757575;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s;
+}
+.container .page .content .footer ul li a:hover {
+  color: #757575;
+}
+.container .page .content .footer ul li a:hover span {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.25s;
 }
 
 /*# sourceMappingURL=style.css.map */
